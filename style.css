@@ -1,0 +1,886 @@
+/* ==========================
+   GOOGLE STYLE RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* ==========================
+        NAVBAR
+========================== */
+
+.navbar{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo i{
+    color:#8b5cf6;
+    font-size:28px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.navbar ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+    color:#8b5cf6;
+}
+
+#darkMode{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:#8b5cf6;
+    color:white;
+    font-size:18px;
+}
+
+/* ==========================
+        HERO
+========================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.startBtn{
+    background:#8b5cf6;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.startBtn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(139,92,246,.5);
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    border-radius:25px;
+}
+/* ==========================
+      DASHBOARD
+========================== */
+
+.dashboard{
+    padding:60px 8%;
+}
+
+.dashboard h2{
+    margin-bottom:35px;
+    font-size:32px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+    text-align:center;
+}
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.05);
+
+background:#8b5cf6;
+
+box-shadow:0 20px 40px rgba(139,92,246,.4);
+
+}
+.card i{
+    font-size:45px;
+    color:#8b5cf6;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card h1{
+    font-size:45px;
+    margin:15px 0;
+}
+/* ==========================
+      GOAL
+========================== */
+
+.goal{
+    padding:20px 8% 70px;
+}
+
+.goal h2{
+    margin-bottom:25px;
+}
+
+.progress-container{
+    background:#334155;
+    height:28px;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:80%;
+    height:100%;
+    background:linear-gradient(90deg,#8b5cf6,#7c3aed);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    animation:grow 2s ease;
+}
+/* ==========================
+     TODAY WORKOUT
+========================== */
+
+.todayWorkout{
+    padding:40px 8%;
+}
+
+.workoutList{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.item{
+    background:#1e293b;
+    padding:20px;
+    border-radius:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+}
+
+.item:hover{
+    background:#8b5cf6;
+}
+
+.item i{
+    color:#22c55e;
+    font-size:22px;
+}
+/* ==========================
+        QUOTE
+========================== */
+
+.quote{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.quote h2{
+    margin-bottom:20px;
+}
+
+.quote p{
+    font-size:24px;
+    font-style:italic;
+    color:#cbd5e1;
+}
+
+/* ==========================
+        FOOTER
+========================== */
+
+footer{
+    margin-top:70px;
+    padding:25px;
+    background:#111827;
+    text-align:center;
+}
+/* =====================================
+        GLASSMORPHISM EFFECT
+===================================== */
+
+.card,
+.item,
+.quote{
+    background:rgba(30,41,59,.65);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+/* =====================================
+            HERO IMAGE
+===================================== */
+
+.hero-image img{
+    transition:.5s;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+}
+
+/* =====================================
+            BUTTON
+===================================== */
+
+.startBtn{
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+.startBtn:active{
+    transform:scale(.95);
+}
+
+/* =====================================
+            CARD ANIMATION
+===================================== */
+
+.card{
+    animation:fadeUp .8s ease;
+}
+
+.item{
+    animation:fadeUp 1s ease;
+}
+
+.quote{
+    animation:fadeUp 1.2s ease;
+}
+/* =====================================
+            KEYFRAMES
+===================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+.progress-fill{
+
+    animation:pulse 2s infinite;
+
+}
+.navbar{
+
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+    backdrop-filter:blur(20px);
+
+background:rgba(17,24,39,.85);
+
+}
+.hero{
+
+    background:linear-gradient(
+135deg,
+#111827,
+#1e293b,
+#0f172a
+);
+
+}
+.card:hover{
+
+    background:#8b5cf6;
+
+}
+
+.card:hover i{
+
+    color:white;
+
+}
+.quote p{
+
+    max-width:700px;
+    margin:auto;
+
+}
+@media(max-width:992px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.navbar{
+
+padding:20px;
+
+}
+
+}
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+height:auto;
+padding:20px;
+
+}
+
+.navbar ul{
+
+margin:20px 0;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero{
+
+padding:40px 20px;
+
+}
+
+.dashboard{
+
+padding:40px 20px;
+
+}
+
+.goal{
+
+padding:40px 20px;
+
+}
+
+.todayWorkout{
+
+padding:40px 20px;
+
+}
+
+.quote{
+
+padding:40px 20px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+}
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#8b5cf6;
+border-radius:30px;
+
+}
+/* =======================
+      CLOCK
+======================= */
+
+#clock{
+
+margin-top:15px;
+font-size:18px;
+color:#cbd5e1;
+
+}
+
+/* =======================
+    WATER BUTTON
+======================= */
+
+.water-buttons{
+
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:15px;
+
+}
+
+.water-buttons button{
+
+width:40px;
+height:40px;
+border:none;
+border-radius:50%;
+background:#8b5cf6;
+color:white;
+font-size:20px;
+cursor:pointer;
+
+}
+
+.water-buttons button:hover{
+
+opacity:.8;
+
+}
+
+/* =======================
+      TOAST
+======================= */
+
+#toast{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #22c55e;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .4s;
+    z-index: 9999;
+}
+
+#toast.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero-mini-card{
+
+    margin-top:30px;
+
+    width:300px;
+
+    background:#1E293B;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+}
+
+.hero-mini-card h3{
+
+    margin-bottom:15px;
+
+    color:#ffffff;
+
+    font-size:22px;
+
+}
+
+.hero-mini-card p{
+
+    margin:10px 0;
+
+    color:#CBD5E1;
+
+    font-size:17px;
+
+}
+
+
+.hero-mini-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.hero-mini-card h3{
+
+margin-bottom:15px;
+
+}
+
+.hero-mini-card p{
+
+margin:8px 0;
+
+}
+@keyframes grow{
+
+from{
+
+width:0;
+
+}
+
+to{
+
+width:80%;
+
+}
+
+}
+.weekly{
+
+padding:60px 8%;
+
+}
+
+/* ==========================
+      WEEKLY PROGRESS
+========================== */
+
+.weekly{
+    padding:60px 8%;
+}
+
+.weekly h2{
+    margin-bottom:30px;
+}
+
+.week-card{
+    background:#1E293B;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.week{
+    margin-bottom:25px;
+}
+
+.week:last-child{
+    margin-bottom:0;
+}
+
+.week-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.bar{
+    width:100%;
+    height:16px;
+    background:#334155;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+    border-radius:30px;
+    animation:grow 2s ease;
+}
+
+/* ===========================
+        PLANNER
+=========================== */
+
+.planner{
+
+padding:70px 8%;
+
+min-height:100vh;
+
+}
+
+.planner h1{
+
+margin-bottom:40px;
+font-size:42px;
+
+}
+
+.form{
+
+display:flex;
+
+gap:15px;
+
+margin-bottom:40px;
+
+}
+
+.form input{
+
+flex:1;
+
+padding:15px;
+
+border:none;
+
+border-radius:10px;
+
+font-size:16px;
+
+background:#1E293B;
+
+color:white;
+
+}
+
+.form button{
+
+padding:15px 25px;
+
+border:none;
+
+background:#8B5CF6;
+
+color:white;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+.form button:hover{
+
+opacity:.9;
+
+}
+.workout{
+
+background:#1E293B;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-bottom:20px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+transition: .3s;
+
+}
+
+.workout button{
+
+margin-left:10px;
+
+padding:10px 15px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:8px;
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+
+
+}
+
+.edit{
+
+background:#3B82F6;
+
+color:white;
+
+}
+
+.delete{
+
+background:#EF4444;
+
+color:white;
+
+}
+.form button{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+}
+@media(max-width:768px){
+
+.form{
+
+flex-direction:column;
+
+}
+
+.form button{
+
+width:100%;
+
+}
+
+}
+.active{
+
+color:#8B5CF6!important;
+
+font-weight:bold;
+
+}
+.active{
+    color:#8B5CF6 !important;
+    font-weight:600;
+    border-bottom:2px solid #8B5CF6;
+    padding-bottom:4px;
+}
+.quote-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#1E293B;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+}
+.week-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}

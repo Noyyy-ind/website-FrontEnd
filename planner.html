@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workout Planner</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-dumbbell"></i>
+
+<h2>FitTrack Pro</h2>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Dashboard</a></li>
+
+<li><a class="active" href="#">Planner</a></li>
+
+<li><a href="progress.html">Progress</a></li>
+
+<li><a href="bmi.html">BMI</a></li>
+
+<li><a href="profile.html">Profile</a></li>
+
+</ul>
+
+</nav>
+
+<section class="planner">
+
+<h1>Workout Planner</h1>
+
+<div class="form">
+
+<input
+id="exercise"
+type="text"
+placeholder="Exercise">
+
+<input
+id="reps"
+type="number"
+placeholder="Reps">
+
+<button id="addBtn">
+
+Add Workout
+
+</button>
+
+</div>
+
+<div id="workoutList">
+
+</div>
+
+</section>
+<div id="toast">
+    Data berhasil diperbarui!
+</div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
